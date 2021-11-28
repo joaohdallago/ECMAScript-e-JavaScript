@@ -1,3 +1,5 @@
+alert('SOMBRA NA NAV E BAIXAR FAVICON')
+
 const pages = {
     ecmaVsJs: `
         <header>
