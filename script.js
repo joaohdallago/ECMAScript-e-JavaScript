@@ -130,6 +130,28 @@ const pages = {
                 Hoisting
             </h1>
         </header>
+
+        <p>
+            Numa tradução direta seria "Elevação", tráta-se deste efeito que eu aposto que já era uma pulga atrás da sua orelha
+        </p>
+
+        <h4>Por que pode isso?</h4>
+
+        <img src="/assets/podeIsso.png" alt="podeIsso">
+
+        <h4>mas não pode isso?</h4>
+
+        <img src="/assets/naoPodeIsso.png" alt="naoPodeIsso">
+
+        <img src="/assets/ReferenceError.png" alt="ReferenceError">
+
+        <p>
+            A impressão que passa é que as declarações de função "sobem" no código quando rodamos, mas na verdade elas ficam exatamente onde estão.
+        </p>
+
+        <p>
+            O que na realidade acontece é que em JavaScript, as declarações de funções já rodam na compilação do código, antes do programa realmente inicializar. Isso é exclusivo de declaração de funções! O mesmo não vale para const e let.
+        </p>
     `,
 
     variables: `
@@ -138,6 +160,20 @@ const pages = {
                 Tipos de variáveis
             </h1>
         </header>
+
+        <p>
+            Por mais que pareçam um pequeno detalhe, os tipos de variáveis funcionam de formas completamente diferentes, e o desconhecimento sobre como cada um funciona pode gerar bugs gigantescos no seu código.
+        </p>
+
+        <img src="http://www.constletvar.com/const-vs-let-vs-var.png" alt="var">
+        
+        <h4>Por que não usar Var?</h4>
+        
+        <img src="/assets/var.png" alt="var">
+
+        <p>
+            É sempre uma boa prática procurar usar o recurso mais restrito e específico possível pra resolver seu problema, tendo assim resultados muito mais previsíveis e controlados.
+        </p>
     `,
 
     for: `
@@ -176,11 +212,11 @@ function selectPage(pageOption) {
     if (pageOption.id === 'for') {
         container.innerHTML = pages.for
     };
-}
+};
 
 function retornaQtd(preco, qtd) {
     return qtd 
-}
+};
 
 function precoTotal_1(preco, qtd) {
     return preco * qtd
@@ -188,8 +224,7 @@ function precoTotal_1(preco, qtd) {
 
 function precoTotal_2(preco, qtd = 1) {
     return preco * qtd
-}
-
+};
 
 function strictModeDemonstration_1() {
     let meuNome = 'luca';
@@ -200,8 +235,7 @@ function strictModeDemonstration_1() {
 
     trocaPrimeiraLetra(meuNome)
     console.log(meuNome) //???
-}
-
+};
 
 function strictModeDemonstration_2() {
     let meuNome = 'luca';
@@ -213,6 +247,5 @@ function strictModeDemonstration_2() {
 
     trocaPrimeiraLetra(meuNome)
     console.log(meuNome) //???
-}
-
+};
 
