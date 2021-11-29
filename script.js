@@ -1,12 +1,8 @@
-alert('SOMBRA NA NAV E BAIXAR FAVICON')
-
 const pages = {
     ecmaVsJs: `
         <header>
             <h1>
-                <em>ECMAScript</em><br>
-                e<br>
-                <em>JavaScript</em>
+                ECMAScript vs JavaScript
             </h1>
         </header>
     `,
@@ -14,7 +10,7 @@ const pages = {
     strictMode: `
         <header>
             <h1>
-                strict mode
+                Strict mode
             </h1>
         </header>
     `,
@@ -22,14 +18,14 @@ const pages = {
     hoisting: `
         <header>
             <h1>
-                hoisting
+                Hoisting
             </h1>
         </header>
     `
 };
 
 const container = document.querySelector('.container');
-container.innerHTML = pages.ecmaVsJs
+//container.innerHTML = pages.ecmaVsJs
 
 function selectPage(pageOption) {
     document.querySelector('.selected').classList.remove('selected')
@@ -49,4 +45,14 @@ function selectPage(pageOption) {
     };
 }
 
+function retornaQtd(preco, qtd) {
+    return qtd 
+}
 
+console.log(retornaQtd(4)) //undefined
+
+function precoTotal(preco, qtd = 1) {
+    return preco * qtd
+}
+
+console.log(precoTotal(4)) //4
