@@ -104,12 +104,46 @@ const pages = {
                 Strict mode
             </h1>
         </header>
+
+        <p>
+            O JavaScript é uma linguagem que tende a evitar crashs, muitos sintaxes erradas ou lógicas equivocadas não impedem o programa de rodar, e o programador só percebe quando estes pequenos problemas viram grandes lá na frente.
+        </p>
+
+        <p>
+            No Strict Mode, o leitor passa o pente-fino no seu código, lançando no console todos esses erros. Para usá-lo basta adicionar "use strict" na primeira linha do escopo desejado. 
+        </p>
+
+        <h4>O que aparecerá no console?</h4>
+
+        <img src="/assets/semStrictMode.png" alt="semStrictMode" class="cursor-pointer" onclick="strictModeDemonstration_1()">
+
+        <p><em>Testa aí</em> 😜 <em>(abra o console do seu navegador e clique na imagem)</em></p>
+
+        <h4>E agora?</h4>
+
+        <img src="/assets/comStrictMode.png" alt="comStrictMode" class="cursor-pointer" onclick="strictModeDemonstration_2()">
     `,
 
     hoisting: `
         <header>
             <h1>
                 Hoisting
+            </h1>
+        </header>
+    `,
+
+    variables: `
+        <header>
+            <h1>
+                Tipos de variáveis
+            </h1>
+        </header>
+    `,
+
+    for: `
+        <header>
+            <h1>
+                Tipos de for
             </h1>
         </header>
     `
@@ -134,6 +168,14 @@ function selectPage(pageOption) {
     if (pageOption.id === 'hoisting') {
         container.innerHTML = pages.hoisting
     };
+
+    if (pageOption.id === 'variables') {
+        container.innerHTML = pages.variables
+    };
+
+    if (pageOption.id === 'for') {
+        container.innerHTML = pages.for
+    };
 }
 
 function retornaQtd(preco, qtd) {
@@ -148,21 +190,29 @@ function precoTotal_2(preco, qtd = 1) {
     return preco * qtd
 }
 
-// let a = 1;
-// let b = 2;
 
-// let suporte = a;
-// a = b;
-// b = suporte;
+function strictModeDemonstration_1() {
+    let meuNome = 'luca';
 
-// console.log(a)  //2
-// console.log(b) //1
+    function trocaPrimeiraLetra(nome) {
+        nome[0] = 'j'
+    };
 
-// let a = 1;
-// let b = 2;
+    trocaPrimeiraLetra(meuNome)
+    console.log(meuNome) //???
+}
 
-// [b, a] = [a, b]
 
-// console.log(a)  //2
-// console.log(b) //1
+function strictModeDemonstration_2() {
+    let meuNome = 'luca';
+
+    function trocaPrimeiraLetra(nome) {
+        "use strict"
+        nome[0] = 'j'
+    };
+
+    trocaPrimeiraLetra(meuNome)
+    console.log(meuNome) //???
+}
+
 
