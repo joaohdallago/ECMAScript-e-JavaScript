@@ -5,6 +5,97 @@ const pages = {
                 ECMAScript vs JavaScript
             </h1>
         </header>
+
+        <h2>Contexto Histórico</h2>
+
+        <p>
+            Até se tornar o que é hoje, o Js passou por um longo caminho, algumas heranças históricas nas nomenclaturas podem causar confusão até hoje.
+        </p>
+
+        <img src="/assets/javascript-1-brendan-eich.png" alt="brendan-eich">
+
+        <p>
+            Criado por Brendan Eich em 1995, o que conhecemos como JavaScript passou por diversos nomes, primeiramente foi batizado como Mocha, por questões de marketing e direitos autorais passou para LiveScript e só então JavaScript.
+        </p>
+
+        <p>
+            Foi nessa fase que a linguagem explodiu pelo mundo, tanto é que até os dias de hoje é chamada popurlamente por este nome.
+        </p>
+
+        <p>
+            Eis que surgem dois problemas, o nome JavaScript também já estava patenteado por outra empresa, e outras empresas já estavam criando suas próprias versões, o que tornaria a linguagem despadronizada e confusa nos diferentes navegadores.
+        </p>
+
+        <p>
+            Numa parceria com a ECMA, uma empresa especializada em padronização de sistemas, formularam finalmente uma linguagem única e regulamentada, o EcmaScript, abrindo um caminho muito mais sedimentado e inteligente para o desenvolvimento da linguagem
+        </p>
+
+        <img src="/assets/Ecmascript evoluiton.png" alt="ecmascript evoluiton">
+
+        <h2>Algumas implementações do ES6...</h2>
+
+        <h3>Default Parameters</h3>
+
+        <p>
+            Todos os argumentos de uma função por padrão são undefined.
+        </p>
+
+        <img src="/assets/retornaQtd.png" alt="retornaQtd">
+
+        <p>
+            Isso pode ocasionar em algos bugs, o que torna a declaração deles obrigatória na maioria das vezes.
+        </p>
+
+        <img src="/assets/retornaNaN.png" alt="retornaNaN">
+
+        <p>
+            O ES6 trouxe a possibilidade de estabelecermos novos parâmetros padrão na função, previnindo bugs e facilitando a vida do balconista.
+        </p>
+
+        <img src="/assets/retorna4.png" alt="retorna4">
+
+        <p>
+            <em>
+                Todas as funções estão declaradas no código desta página, você pode testá-las se quiser
+            </em>
+
+            😊
+        </p>
+
+        <h3>Template String</h3>
+
+        <p>
+            Uma feature que hoje não vivemos sem, mas não existia até 2015 no Js, 
+            agora podemos criar uma mistura de expressões e strings de uma forma muito mais semântica e organizada, sem ter que ficar concatenado, abrindo e fechando aspas, e se preocupando com os espaços.
+        </p>
+
+        <h4>Antes</h4>
+
+        <img src="/assets/semTemplateString.png" alt="semTemplateString">
+
+        <h4>Depois</h4>
+
+        <img src="/assets/comTemplateString.png" alt="comTemplateString">
+
+        <h3>Destructuring</h3>
+
+        <p>
+            Uma forma muito inteligente de extrair dados de arrays e objetos em JavaScript
+        </p>
+
+        <img src="/assets/destructuringLebron.png" alt="destructuringLebron">
+
+        <p>
+            Veja como fica muito mais fácil trocar o valor de duas variáveis:
+        </p>
+
+        <h4>Antes</h4>
+
+        <img src="/assets/semDestructuring.png" alt="semDestructuring">
+
+        <h4>Depois</h4>
+
+        <img src="/assets/comDestructuring.png" alt="comDestructuring">
     `,
 
     strictMode: `
@@ -25,7 +116,7 @@ const pages = {
 };
 
 const container = document.querySelector('.container');
-//container.innerHTML = pages.ecmaVsJs
+container.innerHTML = pages.ecmaVsJs
 
 function selectPage(pageOption) {
     document.querySelector('.selected').classList.remove('selected')
@@ -56,4 +147,22 @@ function precoTotal_1(preco, qtd) {
 function precoTotal_2(preco, qtd = 1) {
     return preco * qtd
 }
+
+// let a = 1;
+// let b = 2;
+
+// let suporte = a;
+// a = b;
+// b = suporte;
+
+// console.log(a)  //2
+// console.log(b) //1
+
+// let a = 1;
+// let b = 2;
+
+// [b, a] = [a, b]
+
+// console.log(a)  //2
+// console.log(b) //1
 
