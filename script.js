@@ -49,10 +49,11 @@ function retornaQtd(preco, qtd) {
     return qtd 
 }
 
-console.log(retornaQtd(4)) //undefined
-
-function precoTotal(preco, qtd = 1) {
+function precoTotal_1(preco, qtd) {
     return preco * qtd
 }
 
-console.log(precoTotal(4)) //4
+function precoTotal_2(preco, qtd = 1) {
+    return preco * qtd
+}
+
